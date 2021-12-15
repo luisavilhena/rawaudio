@@ -1,0 +1,31 @@
+.placard {
+	overflow: hidden;
+	.placard__title {
+		display: flex;
+		h1 {
+			color: white;
+			padding: 20px;
+			color: white;
+			position: relative;
+			white-space: nowrap;
+			border: solid 1px white;
+		}
+	}
+	.placard__description {
+		display: flex;
+		justify-content: end;
+		.placard__description-item {
+			width: 15%;
+			margin-right: 30px;
+			div {
+				h3 {
+					text-transform: uppercase;
+					color: white;
+					&:last-of-type {
+						margin-bottom: 20px;
+					}
+				}
+			}
+		}
+	}
+}

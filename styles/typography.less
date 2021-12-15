@@ -1,0 +1,112 @@
+@import './structure.less';
+
+
+h1, h2, h3, h4, p, a, ul, li {
+	font-family: 'Urbanist', sans-serif;
+	// color: white;
+}
+// p, a {
+// 	font-family: 'Arial', sans-serif;
+// }
+
+h1 {
+	font-size: 50px;
+	font-weight: bold;
+	color: @red;
+	margin-bottom: 50px;
+	span {
+		font-weight: bold;
+	}
+}
+
+h2 {
+	font-size: 40px;
+	color: @gray;
+	margin-left: 20px;
+	font-weight: bold;
+	margin-bottom: 50px;
+}
+
+h3 {
+	font-size: 19px;
+	line-height: 23px;
+}
+
+p {
+	color: white;
+	font-size: 16px;
+	line-height: 18px;
+	margin-bottom: 20px;
+	font-weight: 400;
+}
+strong {
+	color: @red;
+}
+i, em {
+	font-style: italic;
+}
+/////////
+
+h4 {
+	font-size: 12px;
+}
+
+strong {
+	font-weight: bold;
+}
+ul {
+	li {
+		font-size: 11px;
+	}
+}
+
+blockquote, q, {
+	margin:0px 8% 30px 8%;
+	font-style: italic;
+	p:last-of-type {
+		margin-bottom: 15px; 
+	}
+}
+
+@media screen and (max-width: @screen-sm) {
+	.rich-text {
+		ul {
+			li {
+				margin-bottom: 13px;
+			}
+		}
+	}
+
+// 	h1 {
+// 		font-size: 30px;
+// 		line-height: 25px;
+// 		min-height: auto;
+// 	}
+// 	h2 {
+// 		font-size: 20px;
+// 		line-height: 21px;
+// 	}
+// 	h3 {
+// 		font-size: 16px;
+// 		margin-bottom: 3px;
+// 		line-height: 19px;
+// 	}
+// 	p {
+// 		font-size: 14px;
+// 		line-height: 16px;
+// 	}
+// 	strong {
+// 	font-size: 20px;
+// 	line-height: 21px;
+// }
+// 	figure, .wp-block-image {
+// 		margin-bottom: 30px;
+// 		margin-top: 30px;
+// 		figcaption {
+// 			font-size: 12px;
+// 			a {
+// 				font-size: 12px;
+// 			}
+// 		}
+// 	}
+}

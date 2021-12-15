@@ -1,0 +1,136 @@
+@import './structure.less';
+
+
+header {
+	font-family: 'CircularStd', sans-serif;
+	position: fixed;
+	width: 100%;
+	z-index: 2;
+	top: 0;
+	margin: 0 auto;
+	z-index: 999;
+	background-color: black;
+	// padding-bottom: 10px;
+	nav {
+		// margin-left: 17%;
+		// width: 100%;
+	}
+
+	.header__content {
+		// max-width: @screen-lg;
+		padding-top: 20px;
+		padding-left:25px;
+		padding-bottom: 8px;
+		padding-right: 15px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-end;
+		> a {
+			margin-right: 20px;
+		}
+
+		.header-content__name {
+			text-decoration: none;
+			// width: 234px;
+			// position: fixed;
+			// margin-bottom: 10px;
+			// right: 15px;
+			h1 {
+				color: white;
+				font-family: 'CircularStd', sans-serif;
+				letter-spacing: 2px;
+				font-weight: 400;
+				font-size: 16px;
+			}
+		}
+	}
+}
+.anchor-animation {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	h1:nth-child(2) {
+		font-size: 42px;
+		height: 0;
+		transition: height 0.3s;
+		position: absolute;
+		background-color: transparent;
+		color: @red !important;
+		clip-path: inset(-1% -1% -9% -1%); // Added the negative values to prevent icky "bleed" in Chrome
+	}
+	&:hover {
+		h1:nth-child(2) {
+			height: 67%;
+			transition: height 0.2s;
+		}
+
+	}
+}
+
+#logo-anchor {
+	text-decoration: none;
+	padding-bottom: 20px;
+	color: white;
+	h1 {
+		font-family: "Urbanist" sans-serif;
+		font-weight: bold;
+		font-size: 40px;
+		color: white;
+		margin-bottom: 0px;
+	}
+	@media screen and (max-width: @screen-sm)  {
+		top: 9px;
+	}
+}
+
+
+@media screen and (min-width: @screen-lg) {
+	header {
+		nav {
+			// margin-left: 5%;
+			.header__content {
+				// max-width: @screen-xl;
+				.header-content__name {
+				}
+			}
+		}
+	}
+	#logo-anchor {
+	}
+}
+@media screen and (max-width: 750px) {
+	header {
+		nav {
+			display: none;
+		}
+		.header__content {
+			// max-width: @screen-lg;
+			padding-top: 10px;
+			padding-left: 5px;
+			padding-right: 5px;
+			#logo-anchor {
+				position: inherit;
+			}
+
+			.header-content__name {
+				text-decoration: none;
+				position: inherit;
+				display: none;
+				h1 {
+					white-space: nowrap;
+				}
+			}
+		}
+	}
+	header.menu-open {
+		nav {
+			display: block;
+			position: absolute;
+			right: -20px;
+			left: 0px;
+			top: 48px;
+		}
+	}
+}

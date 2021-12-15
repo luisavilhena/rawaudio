@@ -1,0 +1,16 @@
+@import './structure.less';
+.wp-block-embed iframe,
+video {
+	width: 60%;
+	height: 60vh;
+	position: fixed;
+	top: 50%;  
+	left: 50%; 
+	transform: translate(-50%, -50%);
+	// background-color: #505050;
+}
+@media screen and (max-width: @screen-sm) {
+	.wp-block-embed iframe {
+	}
+}
+

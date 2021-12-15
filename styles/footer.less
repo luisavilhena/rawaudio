@@ -1,0 +1,32 @@
+@import './structure.less';
+
+footer {
+	border-top: 1px solid @gray;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: 99;
+	.footer__content {
+		margin-top: 5px;
+		margin-bottom: 5px;
+		padding-right: 15px;
+		padding-left: 15px;
+		width: 100%;
+		.footer__content__icons {
+			display: flex;
+			justify-content: center;
+			a {
+				margin-right: 29px;
+				svg {
+					width: 20px;
+					height: 20px;
+				}
+			}
+		}
+	}
+	
+}
+@media screen and (max-width: @screen-sm) {
+	footer {
+	}
+}

@@ -1,0 +1,130 @@
+//media sizes
+@max-mobile: 600px;
+@screen-xxl: 2560px;
+@screen-md: 1250px; 
+@screen-xxs: 400px;
+
+@width-column: 32.8%;
+@width-column-lg: 32.7%;
+@width-column-md: 45%;
+@width-column-sm: 99%;
+
+@screen-xl: 1900px;
+@screen-lg: 1460px;
+@screen-md: 1000px;
+@screen-sm: 700px;
+
+
+//color
+@red: #CC0000;
+@gray: #999999;
+
+@yellow: #E2DF46;
+@yellow-light: #fec00f;
+@mustard: #966a10;
+@green: #0b1d1c;
+@purple: #1D3831;
+@light-pink: #fffef7;
+@dark-red: #2D0A14;
+@light-purple: #c9bfbc;
+@blue: #6673FF;
+@dark-blue: #003049;
+
+
+//content
+.structure-container {
+	width: 100%;
+	min-height: 100vh;
+	background-color: black;
+	.structure-container__content {
+		padding-top: 80px;
+		max-width: @screen-xxl;
+		margin: 0 auto;
+	}
+
+	@media screen and (max-width: @screen-sm) {
+		.structure-container__content {
+		}
+	}
+}
+
+.structure-unit-block {
+	max-width: @screen-xxl;
+	padding: 50px 20px;
+	@media screen and (min-width: @screen-xxl) {
+		margin: 50px auto;
+	}
+}
+
+.structure-red{
+	a {
+		color: @red !important;
+		&:after {
+			background-color: @red !important;
+		}
+	}
+}
+.structure-block {
+	display: flex;
+	justify-content: center;
+	.structure-block__center {
+		margin: 0px auto 20px auto;
+		width: @width-column;
+		h4 {
+			text-transform: uppercase;
+		}
+	}
+	@media screen and (min-width: @screen-lg) {
+		.structure-block__center {
+			margin: 0px auto 20px auto;
+			width: @width-column-lg;
+		}
+	}
+	@media screen and (max-width: @screen-md) {
+		.structure-block__center {
+			width: @width-column-md;
+		}
+	}
+	@media screen and (max-width: @screen-sm) {
+		.structure-block__center {
+			width: @width-column-sm;
+		}
+	}
+}
+
+//FONT
+@font-face {
+  font-family: CircularStd;
+  src: url('../resources/font/CircularStd-Bold.otf') format('truetype');
+  font-weight: 600; 
+}
+@font-face {
+  font-family: CircularStd;
+  src: url('../resources/font/CircularStd-Book.otf') format('truetype');
+  font-weight: 400; 
+}
+@font-face {
+  font-family: CircularStd;
+  src: url('../resources/font/CircularStd-Medium.otf') format('truetype');
+  font-weight: 500; 
+}
+@font-face {
+  font-family: CircularStd;
+  src: url('../resources/font/CircularStd-BlackItalic.otf') format('opentype');
+  font-style: italic;
+}
+
+
+
+
+//Columns
+.structure-justify-start {
+	justify-content: flex-start !important;
+}
+.structure-text-left {
+	text-align: left !important;
+}
+body {
+	// max-width: 1400px;
+	// margin: 0 auto;
+}

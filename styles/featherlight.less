@@ -1,0 +1,68 @@
+.featherlight {
+	* {
+		color: white;
+	}
+	.menu-featherlight {
+		display: flex;
+		flex-direction: column;
+
+		#mylightbox {
+			.menu-featherlight__content {
+				display: flex;
+				color: white;
+			}
+		}
+	}
+	.featherlight-content {
+		border: 1px solid white;
+		background-color: black !important;
+		#mylightbox {
+			padding: 30px;
+			h1 {
+				padding-bottom: 30px;
+				border-bottom: 1px solid @gray;
+			}
+			.menu-featherlight__boxes {
+				.menu-featherlight__box {
+					display: flex;
+					margin-bottom: 30px;
+					> div {
+						display: flex;
+						flex-direction: column;
+						h3 {
+							margin-bottom: 20px;
+							font-weight: bold;
+						}
+						a {
+							font-weight: 300;
+							text-decoration: none;
+							font-size: 18px;
+							line-height: 21px;
+							cursor: pointer;
+							&:hover {
+								color: @red;
+							}
+						}
+						p {
+							font-weight: 300;
+							margin-bottom: 0px;
+						}
+						&:first-of-type {
+							margin-right: 30px;
+						}
+					}
+				}
+			}			
+		}
+	}
+	.featherlight-image {
+		border: 1px solid white;
+	}
+	.featherlight-close-icon {
+		color: white !important;
+		background-color: transparent !important;
+	}
+  &:last-of-type {
+		background-color: @gray !important;
+	}
+}
