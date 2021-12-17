@@ -13,7 +13,7 @@ add_action('wp_enqueue_scripts', 'raw_theme');
 function raw_theme_add_custom_image_sizes() {
 
      // Add "vertical" image
-    add_image_size( 'vertical', 590, 670, true);
+    add_image_size( 'vertical', 270, 500, true);
     add_image_size( 'vertical-larger', 890, 970, true);
     //horizontal
     add_image_size( 'horizontal', 450, 300, true);

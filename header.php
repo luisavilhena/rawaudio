@@ -74,7 +74,7 @@
         ?>
 
         <div class="menu-featherlight">
-          <a href="#" data-featherlight="#mylightbox">CONTATO</a>
+          <a href="#" data-featherlight="#mylightbox">CONTACT</a>
           <div id="mylightbox">
             <h1>CONTACT</h1>
             <div class="menu-featherlight__boxes">
