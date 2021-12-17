@@ -60,12 +60,12 @@ $(document).ready(function(){
 	  slidesToShow: 1,
 	  slidesToScroll: 1,
 	  autoplay: true,
-	  speed: 900,
+	  speed: 1000,
 	  autoplaySpeed: 0,
 	  dots: true,
 	  adaptiveHeight: true,
-	  cssEase: "linear",
-	  easing: 'linear',
+	  fade: true,
+	  // cssEase: 'linear',
 	  waitForAnimate: false,
 	  asNavFor: '.carousel__description',
   });
@@ -146,6 +146,8 @@ $(document).ready(function(){
   // Fazemos com que ele recomece do outro lado, logo depois do paragrafo anterior
   animate(para1, para1.offsetWidth);
   animate(para2, para1.offsetWidth);
+
+
 })
 
 //////////////TRANSLATE

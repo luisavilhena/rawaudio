@@ -24,18 +24,18 @@ function placard() {
 			<div class="placard">
 				<div class="placard__title" id="para1">
 				<?php foreach ($block['placard'] as $items) : ?>
-					<h1 id=""><?php echo $items['title'] ?></h1>
+					<h1 class="<?php echo $items['id'] ?>"><?php echo $items['title'] ?></h1>
 				<?php endforeach;  ?>
 				</div>
 				<div class="placard__title" id="para2">
 				<?php foreach ($block['placard'] as $items) : ?>
-					<h1 id=""><?php echo $items['title'] ?></h1>
+					<h1 class="<?php echo $items['id'] ?>"><?php echo $items['title'] ?></h1>
 				<?php endforeach;  ?>
 				</div>
 				<div class="placard__description">
 					<?php foreach ($block['placard'] as $items) : ?>
 						<div class="placard__description-item">
-							<div class="">
+							<div class="<?php echo $items['id'] ?>">
 								<?php echo $items['description'] ?>
 							</div>
 						</div>
