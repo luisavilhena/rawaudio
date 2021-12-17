@@ -7,7 +7,7 @@
 			$args = array(
 			    'post_type' => 'portfolio',
 			    'post_status' => 'publish',
-			    'posts_per_page' => 5,
+			    'posts_per_page' => 100,
 			    'tax_query' => array(
 			        array(
 			            'taxonomy' => 'portfoliocategories',
