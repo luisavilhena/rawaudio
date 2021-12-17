@@ -23,6 +23,9 @@ function carousel() {
 			?>
  
 			<div class="carousel">
+				<div class="carousel-loading">
+					
+				</div>
 				<div class="carousel__imgs">
 					<?php foreach ($block['carousel'] as $carousel) : ?>
 						<?php if ($carousel['img']) : ?>

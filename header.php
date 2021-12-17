@@ -127,6 +127,7 @@
           </div>
         </div>
       </nav>
+      <div id="weglot_here"></div>
       <a
         class="header-content__name"
         href="<?php echo get_home_url(); ?>">

@@ -1,4 +1,5 @@
 .featherlight {
+	top: 90px;
 	* {
 		color: white;
 	}
@@ -16,16 +17,18 @@
 	.featherlight-content {
 		border: 1px solid white;
 		background-color: black !important;
+		padding: 0;
 		#mylightbox {
-			padding: 30px;
 			h1 {
+				padding: 30px;
 				padding-bottom: 30px;
 				border-bottom: 1px solid @gray;
 			}
 			.menu-featherlight__boxes {
 				.menu-featherlight__box {
 					display: flex;
-					margin-bottom: 30px;
+					padding: 0px 30px 30px 30px;
+					
 					> div {
 						display: flex;
 						flex-direction: column;
@@ -36,7 +39,7 @@
 						a {
 							font-weight: 300;
 							text-decoration: none;
-							font-size: 18px;
+							font-size: 16px;
 							line-height: 21px;
 							cursor: pointer;
 							&:hover {
@@ -49,6 +52,7 @@
 						}
 						&:first-of-type {
 							margin-right: 30px;
+							width: 225px;
 						}
 					}
 				}
@@ -59,8 +63,12 @@
 		border: 1px solid white;
 	}
 	.featherlight-close-icon {
-		color: white !important;
+		color: white;
 		background-color: transparent !important;
+		font-size: 19px;
+		&:hover {
+			color: @red;
+		}
 	}
   &:last-of-type {
 		background-color: @gray !important;

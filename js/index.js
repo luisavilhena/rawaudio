@@ -109,44 +109,57 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 	const para1 = document.getElementById("para1");
+	const para2 = document.getElementById("para2");
+  let loop;
+
+  // Vamos fazer com que o segundo paragrafo se posicione depois do primeiro
+  para2.style.left = para1.offsetWidth + 'px';
 	  
-	function animate(element) {
+	function animate(element, endStart) {
+    let loop;
+    // Guarda a largura do elemento
 	  let elementWidth = element.offsetWidth;
+    // Guarda a largura do elemento pai
 	  let parentWidth = element.parentElement.offsetWidth;
-	  let flag = 0;
-
-	  setInterval(() => {
-      element.style.marginLeft = --flag + "px";
-      if (elementWidth == -flag) {
-          flag = parentWidth;
-	      }
-	  }, 10);
+    // Velocidade da animacao
+    let speed = 3;
+    
+    // Aqui cria-se um loop para aa animação que será executado a cada frame
+    // window.requestAnimationFrame executa a animacao no proxima frame
+    // Para deixar em loop, no final da função, chamamos o window.requestAnimationFrame novamente para executar o animationLoop de novo
+    const animationLoop = () => {
+      // Primeiro pegamos a posição atual do elemento
+      let left = parseFloat(window.getComputedStyle(element).left);
+      // Movemos o elemento X pixels para a esquerda, sendo que X é a variabel "speed"
+      element.style.left = left - speed + "px";
+      // Se a posição do elemento sair completamente da tela, seta a posição dele para a posicao "endStart"
+	    if (left < -elementWidth) {
+    	  element.style.left = endStart + 'px';
+	    }
+      
+      loop = window.requestAnimationFrame(animationLoop);
+    }
+    animationLoop();
+    return loop;
 	}
-	animate(para1);
+  // Quando o elemento sair completamente da tela
+  // Fazemos com que ele recomece do outro lado, logo depois do paragrafo anterior
+  animate(para1, para1.offsetWidth);
+  animate(para2, para1.offsetWidth);
 })
 
-
-//CONTACT
+//////////////TRANSLATE
 $(document).ready(function(){
-	$('.wpcf7-radio .wpcf7-list-item').on("click", function(e){
-		if ($('.wpcf7-radio .wpcf7-list-item').hasClass("structure-color-black")) {
-			$('.wpcf7-radio .wpcf7-list-item').removeClass("structure-color-black")
-			$(this).toggleClass('structure-color-black')
-		} else {
-			$(this).toggleClass('structure-color-black')
-		}
-  })
+	$('.weglot-inline ul .br a').text('PORT');
+	$('.weglot-inline ul .en a').text('ENG');
 })
-
-
-
 
 //LOADING
 $(document).ready(function(){
-	$('.loading').on("click", function(e){
+	$('.carousel-loading').on("click", function(e){
 		$(this).css('display', "none")
 	})
-	$('.loading').delay(7000).fadeOut('slow')
+	$('.carousel-loading').delay(1000).fadeOut('slow')
 })
 
 
