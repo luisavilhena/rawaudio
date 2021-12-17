@@ -70,7 +70,6 @@ function register_carbon_fields() {
 	require_once('blocks/load.php');
 }
 
-
 ///////////
 ///MENU////
 ///////////

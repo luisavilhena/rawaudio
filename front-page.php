@@ -11,7 +11,7 @@
 			    'tax_query' => array(
 			        array(
 			            'taxonomy' => 'portfoliocategories',
-			            'field'    => 'classics',
+			            'field'    => 'advertising',
 			            'terms'    => array( 'TERM_SLUG' ),
 			            'operator' => 'IN'
 			        ),

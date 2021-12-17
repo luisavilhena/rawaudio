@@ -21,7 +21,7 @@
 }
 .carousel .carousel__imgs .slick-dots {
   left: 100% !important;
-  bottom: 115px !important;
+  bottom: 0px !important;
   z-index: 99999;
   width: 55.5%;
   display: flex;
@@ -251,7 +251,7 @@ video {
   color: transparent;
   font-weight: 400;
   background-color: rgba(0, 0, 0, 0.6);
-  height: 30%;
+  height: 72px;
   bottom: 0;
   right: 0;
   left: 0;
@@ -2189,7 +2189,7 @@ header nav {
 header .country-selector.weglot-inline {
   position: absolute;
   right: 20px;
-  top: 50px;
+  top: 42px;
 }
 header .country-selector.weglot-inline a {
   font-size: 17px;
