@@ -18,16 +18,20 @@
 		border: 1px solid white;
 		background-color: black !important;
 		padding: 0;
+		width: @width-column;
 		#mylightbox {
 			h1 {
-				padding: 30px;
+				text-align: center;
+				padding: 30px 0;
 				padding-bottom: 30px;
 				border-bottom: 1px solid @gray;
 			}
 			.menu-featherlight__boxes {
 				.menu-featherlight__box {
 					display: flex;
-					padding: 0px 30px 30px 30px;
+					padding: 0px 10px 30px 10px;
+					margin: 0 auto;
+					max-width: 407px;
 					
 					> div {
 						display: flex;
@@ -71,6 +75,6 @@
 		}
 	}
   &:last-of-type {
-		background-color: @gray !important;
+		background-color: rgba(0,0,0,0.9)!important;
 	}
 }

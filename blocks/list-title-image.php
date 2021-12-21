@@ -27,7 +27,9 @@ function list_title_image() {
 					<div class="list-title-image__item">
 						<h3 class="list-title-image__item-title"><?php echo $item["title"]?></h3>
 						<h4 class="list-title-image__item-subtitle"><?php echo $item["subtitle"]?></h4>
-						<img class="list-title-image__item-img" src="<?php echo wp_get_attachment_image_src($item['img'], 'vertical')[0]; ?>">
+						<?php if ($item['img']):  ?>
+						<img class="list-title-image__item-img" src="<?php echo wp_get_attachment_image_src($item['img'], '')[0]; ?>">
+						<?php endif;  ?>
 					</div>
 				<?php endforeach;  ?>
 			</div>

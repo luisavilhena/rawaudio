@@ -74,7 +74,7 @@
         ?>
 
         <div class="menu-featherlight">
-          <a href="#" data-featherlight="#mylightbox">CONTACT</a>
+          <a href="" data-featherlight="#mylightbox">CONTACT</a>
           <div id="mylightbox">
             <h1>CONTACT</h1>
             <div class="menu-featherlight__boxes">
@@ -128,11 +128,6 @@
         </div>
       </nav>
       <div id="weglot_here"></div>
-      <a
-        class="header-content__name"
-        href="<?php echo get_home_url(); ?>">
-        
-      </a>
     </div>
 	  
 	</header>

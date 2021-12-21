@@ -28,14 +28,14 @@
 			}
 		}
 		.slick-dots {
-			left: 100% !important;
+			left: 101% !important;
 			bottom: 0px !important;
 			z-index: 99999;
-			width: 55.5%;
+			width: 52%;
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: center;
-			max-width: 570px;
+			// max-width: 570px;
 			// border-top: 1px solid white;
 			// border-bottom: 1px solid white;
 
@@ -44,16 +44,17 @@
 				width: auto;
 				// max-width: 333px;
 				height: auto;
-				margin: -0.5px;
-				border: 1px solid white;
+				margin: -1px;
+				border: 3px solid white;
 				button {
 					color: @red;
 					font-size: 18px;
-					padding: 30px;
-					width: auto;
+					padding: 30px 10px;
+					min-width: 328px;
 					height: auto;
 					margin: 0;
 					font-weight: bold;
+					text-align: right;
 					// display: contents;
 					// z-index: 9999;
 					&:before {
@@ -70,13 +71,15 @@
 			}
 			li:nth-of-type(1n){
 				border-left: none;
-				display: flex;
-				justify-content: flex-end;
+				button {
+					text-align: right;
+				}
 			}
 			li:nth-of-type(2n){
 				border-right: none;
-				display: flex;
-				justify-content: flex-start;
+				button {
+					text-align: left
+				}
 			}
 			li.slick-active {
 				button {

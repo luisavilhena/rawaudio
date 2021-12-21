@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+
 <main id="project-list" class="structure-container structure-color-light-pink">
 	<div class="structure-container__content">
 		<div class="project-list">
@@ -11,7 +12,7 @@
 			    'tax_query' => array(
 			        array(
 			            'taxonomy' => 'portfoliocategories',
-			            'field'    => 'advertising',
+			            'field'    => 'latest',
 			            'terms'    => array( 'TERM_SLUG' ),
 			            'operator' => 'IN'
 			        ),
@@ -26,13 +27,20 @@
 			        $arr_posts->the_post();
 			        ?>
 			        <div class="project-list__item">
-			        	<img  class=""src="<?php the_post_thumbnail_url("vertical") ?>'">
+			        	<img  class=""src="<?php the_post_thumbnail_url("horizontal") ?>'">
 			          <div class="project-list__item__title">
 			          	<div>
+			          		<?php if (carbon_get_the_post_meta('client')):?>
 			          		<p><?php echo carbon_get_the_post_meta('client'); ?></p>
+			          		<?php endif;?>
+			          		<?php if (carbon_get_the_post_meta('agency')):?>
 			          		<p><?php echo carbon_get_the_post_meta('agency'); ?></p>
+			          		<?php endif;?>
+			          		<span></span>
 			          	</div>
-			            <h4><?php the_title(); ?></h4>
+			            <h4><?php the_title(); ?>
+			            	<span></span>
+			            </h4>
 			          </div>
 			          <?php the_content() ?>
 			        </div>

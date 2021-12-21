@@ -31,13 +31,6 @@ $(document).ready(function(){
 })
 
 
-$(document).ready(function(){
-	$('#name1').attr("placeholder", "NAME")
-	$('#email1').attr("placeholder", "E-MAIL")
-	$('#phone1').attr("placeholder", "PHONE")
-	$('.captachinput').attr("placeholder", "RECAPCTHA")
-	$('input[type="password"]').attr("placeholder", "PASSWORD")
-})
 
 ///////////////////CAROUSEL/////////////////////////////
 $(document).ready(function(){
@@ -166,7 +159,7 @@ $(document).ready(function(){
 
 
 
-//TEXT BOX CLICk
+//PROJECTS
 $(document).ready(function(){
 	$('.project-list__item').on("click", function(e){
 		$(this).toggleClass("active")
@@ -188,8 +181,8 @@ $(document).ready(function(){
 			$(this).removeClass("active")
 		})
 	}
-
 })
+
 
 //BACKGROUND-COLOR MENU
 // $(document).ready(function(){
