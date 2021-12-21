@@ -215,6 +215,8 @@ video {
 }
 #project-list .project-list > .project-list__item .project-list__item__title {
   height: 0;
+  position: absolute;
+  bottom: 80px;
 }
 #project-list .project-list > .project-list__item .project-list__item__title div > p {
   color: transparent;
