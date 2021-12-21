@@ -20,10 +20,10 @@
   color: transparent;
 }
 .carousel .carousel__imgs .slick-dots {
-  left: 101% !important;
+  left: 100% !important;
   bottom: 0px !important;
   z-index: 99999;
-  width: 52%;
+  width: 64%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -36,9 +36,9 @@
 }
 .carousel .carousel__imgs .slick-dots li button {
   color: #CC0000;
-  font-size: 18px;
+  font-size: 16px;
   padding: 30px 10px;
-  min-width: 328px;
+  min-width: 293px;
   height: auto;
   margin: 0;
   font-weight: bold;
