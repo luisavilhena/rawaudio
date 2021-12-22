@@ -427,7 +427,7 @@ video {
   color: white;
   position: relative;
   white-space: nowrap;
-  border: solid 1px white;
+  border: solid 2px white;
 }
 .placard .placard__title:nth-of-type(2n) h1:first-of-type {
   border-left: none;
