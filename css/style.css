@@ -1561,6 +1561,7 @@ div.datepick-inline .datepick-title-row th {
 }
 .featherlight .featherlight-content #mylightbox .menu-featherlight__boxes .menu-featherlight__box > div a:hover {
   color: #CC0000;
+  transition: color 0.4s;
 }
 .featherlight .featherlight-content #mylightbox .menu-featherlight__boxes .menu-featherlight__box > div p {
   font-weight: 300;
@@ -1912,6 +1913,16 @@ nav ul#main-menu > li a {
   text-transform: uppercase;
   color: white;
 }
+nav ul#main-menu > li a:after {
+  content: " ";
+  width: 100%;
+  height: 2px;
+  display: block;
+  position: absolute;
+  top: 25px;
+  background-color: transparent;
+  transition: background-color 0.4s;
+}
 nav ul#main-menu > li:hover > a:after {
   content: " ";
   width: 100%;
@@ -1920,6 +1931,7 @@ nav ul#main-menu > li:hover > a:after {
   position: absolute;
   top: 25px;
   background-color: white;
+  transition: background-color 0.4s;
 }
 nav ul#main-menu > li:hover > ul.sub-menu {
   display: flex;
@@ -2217,7 +2229,12 @@ em {
   color: #CC0000 !important;
 }
 .structure-red a:after {
+  background-color: transparent !important;
+  transition: background-color 0.4s;
+}
+.structure-red a:hover:after {
   background-color: #CC0000 !important;
+  transition: background-color 0.4s;
 }
 .structure-block {
   display: flex;

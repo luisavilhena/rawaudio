@@ -146,6 +146,8 @@ $(document).ready(function(){
  		$('.'+classTitle).css('color', '#CC0000')
  		$('.placard__description .placard__description-item div.'+classTitle + ' h3' ).css('color', '#CC0000')
  		$('.placard__description .placard__description-item div.'+classTitle + ' p' ).css('color', '#CC0000')
+ 		$('.placard__description .placard__description-item div.'+classTitle + ' h3' ).css('transition', 'color 0.4s')
+ 		$('.placard__description .placard__description-item div.'+classTitle + ' p' ).css('transition', 'color 0.4s')
  			// let animation1 = animate(para1, para1.offsetWidth);
  			// let animation2 = animate(para2, para1.offsetWidth);
  		  window.cancelAnimationFrame(para1, para1.offsetWidth)
