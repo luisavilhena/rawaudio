@@ -2210,7 +2210,7 @@ em {
 }
 @media screen and (min-width: 1000px) {
   .structure-unit-block {
-    margin: 20px auto;
+    margin: 20px auto 0 auto;
   }
 }
 .structure-red a {
@@ -2266,11 +2266,8 @@ em {
   src: url('../resources/font/CircularStd-BlackItalic.otf') format('opentype');
   font-style: italic;
 }
-.structure-justify-start {
-  justify-content: flex-start !important;
-}
-.structure-text-left {
-  text-align: left !important;
+body {
+  overflow-x: hidden;
 }
 .block-title {
   margin-top: -200px;
