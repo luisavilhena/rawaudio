@@ -299,7 +299,7 @@ video {
 #project-list .project-list > .project-list__item .project-list__item__title {
   height: 0;
   position: absolute;
-  bottom: 80px;
+  bottom: 100px;
 }
 #project-list .project-list > .project-list__item .project-list__item__title div > p {
   color: transparent;
@@ -380,12 +380,17 @@ video {
   width: 100%;
   background-color: white;
 }
+#project-list .project-list > .project-list__item:hover > .project-list__item__title h4 {
+  color: white;
+  position: relative;
+  display: inline;
+}
 #project-list .project-list > .project-list__item:hover > .project-list__item__title h4 p {
   color: white;
   position: relative;
   display: inline;
 }
-#project-list .project-list > .project-list__item:hover > .project-list__item__title h4 p span {
+#project-list .project-list > .project-list__item:hover > .project-list__item__title h4 span {
   position: absolute;
   height: 2px;
   top: -7px;
