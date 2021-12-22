@@ -100,31 +100,19 @@ header {
 	}
 }
 
-
-@media screen and (min-width: @screen-lg) {
-	header {
-		nav {
-			// margin-left: 5%;
-			.header__content {
-				// max-width: @screen-xl;
-				.header-content__name {
-				}
-			}
-		}
-	}
-	#logo-anchor {
-	}
-}
-@media screen and (max-width: 750px) {
+@media screen and (max-width: @screen-md) {
 	header {
 		nav {
 			display: none;
 		}
+		.country-selector.weglot-inline {
+			right: 70px;
+		}
 		.header__content {
-			// max-width: @screen-lg;
 			padding-top: 10px;
 			padding-left: 5px;
 			padding-right: 5px;
+			justify-content: space-between;
 			#logo-anchor {
 				position: inherit;
 			}
@@ -141,11 +129,17 @@ header {
 	}
 	header.menu-open {
 		nav {
-			display: block;
+			background-color: black;
+			display: flex;
+			flex-direction: column;
 			position: absolute;
 			right: -20px;
 			left: 0px;
 			top: 48px;
+			padding-bottom: 100px;
+			.menu-featherlight {
+				margin-left: 35px;
+			}
 		}
 	}
 }

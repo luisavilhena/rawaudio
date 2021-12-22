@@ -12,8 +12,8 @@
 			    'tax_query' => array(
 			        array(
 			            'taxonomy' => 'portfoliocategories',
-			            'field'    => 'latest',
-			            'terms'    => array( 'TERM_SLUG' ),
+			            'field'    => 'slug',
+			            'terms'    => array( 'latest' ),
 			            'operator' => 'IN'
 			        ),
 			    ),
@@ -38,9 +38,8 @@
 			          		<?php endif;?>
 			          		<span></span>
 			          	</div>
-			            <h4><?php the_title(); ?>
-			            	<span></span>
-			            </h4>
+			            <h4><?php the_title(); ?></h4>
+			            <span></span>
 			          </div>
 			          <?php the_content() ?>
 			        </div>
@@ -52,3 +51,6 @@
 		</div>
 	</div>
 </main>
+<?php
+get_footer();
+

@@ -1,26 +1,26 @@
 //js functions
 //create location change
 
-(function() {
-    var pushState = history.pushState;
-    var replaceState = history.replaceState;
+// (function() {
+//     var pushState = history.pushState;
+//     var replaceState = history.replaceState;
 
-    history.pushState = function() {
-        pushState.apply(history, arguments);
-        window.dispatchEvent(new Event('pushstate'));
-        window.dispatchEvent(new Event('locationchange'));
-    };
+//     history.pushState = function() {
+//         pushState.apply(history, arguments);
+//         window.dispatchEvent(new Event('pushstate'));
+//         window.dispatchEvent(new Event('locationchange'));
+//     };
 
-    history.replaceState = function() {
-        replaceState.apply(history, arguments);
-        window.dispatchEvent(new Event('replacestate'));
-        window.dispatchEvent(new Event('locationchange'));
-    };
+//     history.replaceState = function() {
+//         replaceState.apply(history, arguments);
+//         window.dispatchEvent(new Event('replacestate'));
+//         window.dispatchEvent(new Event('locationchange'));
+//     };
 
-    window.addEventListener('popstate', function() {
-        window.dispatchEvent(new Event('locationchange'))
-    });
-})();
+//     window.addEventListener('popstate', function() {
+//         window.dispatchEvent(new Event('locationchange'))
+//     });
+// })();
 
 
 
@@ -56,7 +56,7 @@ $(document).ready(function(){
 	  speed: 1000,
 	  autoplaySpeed: 0,
 	  dots: true,
-	  adaptiveHeight: true,
+	  adaptiveHeight: false,
 	  fade: true,
 	  // cssEase: 'linear',
 	  waitForAnimate: false,
@@ -127,7 +127,7 @@ $(document).ready(function(){
       element.style.left = left - speed + "px";
       // Se a posição do elemento sair completamente da tela, seta a posição dele para a posicao "endStart"
 	    if (left < -elementWidth) {
-    	  element.style.left = endStart + 'px';
+    	  element.style.left = endStart - 20 + 'px';
 	    }
       
       loop = window.requestAnimationFrame(animationLoop);
@@ -140,6 +140,23 @@ $(document).ready(function(){
   animate(para1, para1.offsetWidth);
   animate(para2, para1.offsetWidth);
 
+  $( ".placard__title h1" ).hover(function(e) {
+  	let classTitle = e.target.className;
+  	console.log($('.'+classTitle))
+ 		$('.'+classTitle).css('color', '#CC0000')
+ 		$('.placard__description .placard__description-item div.'+classTitle + ' h3' ).css('color', '#CC0000')
+ 		$('.placard__description .placard__description-item div.'+classTitle + ' p' ).css('color', '#CC0000')
+ 			// let animation1 = animate(para1, para1.offsetWidth);
+ 			// let animation2 = animate(para2, para1.offsetWidth);
+ 		  window.cancelAnimationFrame(para1, para1.offsetWidth)
+ 		  window.cancelAnimationFrame(para2, para1.offsetWidth)
+  } , function(e){
+	 	let classTitle = e.target.className;
+	 	console.log($('.'+classTitle))
+			$('.'+classTitle).css('color', '#ffffff')
+			$('.placard__description .placard__description-item div.'+classTitle + ' h3' ).css('color', '#ffffff')
+			$('.placard__description .placard__description-item div.'+classTitle + ' p' ).css('color', '#ffffff')
+  });
 
 })
 
@@ -159,7 +176,7 @@ $(document).ready(function(){
 
 
 
-//PROJECTS
+////PROJECTS
 $(document).ready(function(){
 	$('.project-list__item').on("click", function(e){
 		$(this).toggleClass("active")
@@ -171,17 +188,17 @@ $(document).ready(function(){
 	})
 })
 
-$(document).ready(function(){
-	$('.text-box__item__more').on("click", function(e){
-		console.log('clicou out location')
-		$(this).toggleClass("active")
-	})
-	if($('.text-box__item__more a')){
-		$('.text-box__item__more').on("click", function(e){
-			$(this).removeClass("active")
-		})
-	}
-})
+// $(document).ready(function(){
+// 	$('.text-box__item__more').on("click", function(e){
+// 		console.log('clicou out location')
+// 		$(this).toggleClass("active")
+// 	})
+// 	if($('.text-box__item__more a')){
+// 		$('.text-box__item__more').on("click", function(e){
+// 			$(this).removeClass("active")
+// 		})
+// 	}
+// })
 
 
 //BACKGROUND-COLOR MENU

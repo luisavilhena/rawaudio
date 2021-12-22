@@ -139,17 +139,8 @@ nav {
 
 @media screen and (max-width: @screen-md) {
 	ul#main-menu {
-		// margin-left: -100px;
-		li {
-			padding-left: 15px;
-		}
-	}
-}
-@media screen and (max-width: 750px) {
-	ul#main-menu {
 		display: none;
 		flex-direction: column;
-		min-height: 100vh;
 		li {
 			padding-left: 0px;
 			padding-bottom: 40px;
@@ -230,6 +221,24 @@ nav {
 			padding-right: 35px;
 			padding-top: 30px;
 			display: block;
+
+			li {
+				padding-left: 0;
+				ul.sub-menu {
+					display: block;
+					flex-direction: column;
+					margin-bottom: 30px;
+					left: -86px;
+					position: relative;
+					li {
+						margin-left: 30px;
+						margin-bottom: 20px;
+						&:after {
+							display: none;
+						}
+					}
+				}
+			}
 		}
 	}
 }

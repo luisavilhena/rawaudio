@@ -9,8 +9,11 @@ video {
 	transform: translate(-50%, -50%);
 	// background-color: #505050;
 }
-@media screen and (max-width: @screen-sm) {
-	.wp-block-embed iframe {
+@media screen and (max-width: @screen-md) {
+	.wp-block-embed iframe, 
+	video {
+		width: 95%;
+		height: 75vh;
 	}
 }
 

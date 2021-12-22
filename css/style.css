@@ -20,19 +20,25 @@
   color: transparent;
 }
 .carousel .carousel__imgs .slick-dots {
-  left: 100% !important;
-  bottom: 0px !important;
+  left: 100% ;
+  bottom: 0px ;
   z-index: 99999;
-  width: 64%;
+  width: 67%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
+  margin-right: 20px;
+  margin-left: 20px;
+  max-width: 588px;
+  border-bottom: 2px solid white;
+  padding-bottom: -1px;
 }
 .carousel .carousel__imgs .slick-dots li {
   width: auto;
   height: auto;
-  margin: -1px;
-  border: 3px solid white;
+  margin: 0px;
+  border: 2px solid white;
+  border-bottom: none;
 }
 .carousel .carousel__imgs .slick-dots li button {
   color: #CC0000;
@@ -77,9 +83,11 @@
   bottom: 0;
   right: 0;
   left: 20px;
+  max-width: 570px;
 }
 .carousel .description .carousel__description {
   height: 82vh;
+  max-width: 570px;
 }
 .carousel .description .carousel__description .slick-list {
   height: 82vh;
@@ -134,6 +142,74 @@
   background-size: contain;
   background-position: center;
 }
+@media screen and (max-width: 1000px) {
+  .carousel {
+    display: relative;
+    flex-direction: column;
+  }
+  .carousel .carousel__imgs {
+    width: 100%;
+    height: auto;
+    margin-top: 240px;
+  }
+  .carousel .carousel__imgs .slick-list .slick-track .carousel__imgs__item .menu__item__title {
+    position: absolute;
+    top: 0;
+  }
+  .carousel .carousel__imgs .slick-list .slick-track .carousel__imgs__item .carousel__imgs__item__img {
+    height: 25vh;
+  }
+  .carousel .carousel__imgs .slick-dots {
+    left: 0;
+    bottom: 110%;
+    width: 100%;
+    max-width: 100% !important;
+    justify-content: center;
+    border-bottom: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .carousel .carousel__imgs .slick-dots li {
+    border-bottom: 1px solid white;
+  }
+  .carousel .carousel__imgs .slick-dots li button {
+    font-size: 15px;
+    min-width: auto;
+    width: auto;
+  }
+  .carousel .carousel__imgs .slick-dots li:nth-of-type(1n) {
+    border-left: 1px solid white;
+  }
+  .carousel .carousel__imgs .slick-dots li:nth-of-type(1n) button {
+    text-align: center;
+  }
+  .carousel .carousel__imgs .slick-dots li:nth-of-type(2n) {
+    border-right: 1px solid white;
+  }
+  .carousel .carousel__imgs .slick-dots li:nth-of-type(2n) button {
+    text-align: center;
+  }
+  .carousel .description {
+    width: 100%;
+  }
+  .carousel .description .main__description {
+    left: 20px;
+    right: 20px;
+    max-width: 98%;
+    position: relative;
+  }
+  .carousel .description .carousel__description {
+    height: auto;
+    max-width: 100%;
+  }
+  .carousel .description .carousel__description .slick-list .slick-track .carousel__description__item {
+    width: 99vw;
+    padding-right: 20px;
+  }
+  .carousel .description .carousel__description .slick-list .slick-track .carousel__description__item .carousel__description__item__description {
+    height: auto;
+  }
+}
 .wp-block-embed iframe,
 video {
   width: 60%;
@@ -142,6 +218,13 @@ video {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 1000px) {
+  .wp-block-embed iframe,
+  video {
+    width: 95%;
+    height: 75vh;
+  }
 }
 #project-list {
   min-height: 100vh;
@@ -343,10 +426,17 @@ video {
   white-space: nowrap;
   border: solid 1px white;
 }
+.placard .placard__title:nth-of-type(2n) h1:first-of-type {
+  border-left: none;
+}
+.placard .placard__title:nth-of-type(2n) h1:last-of-type {
+  border-right: none;
+}
 .placard .placard__description {
   margin-top: 170px;
   display: flex;
   justify-content: end;
+  flex-wrap: wrap;
 }
 .placard .placard__description .placard__description-item {
   width: 14%;
@@ -358,6 +448,29 @@ video {
 }
 .placard .placard__description .placard__description-item div h3:last-of-type {
   margin-bottom: 20px;
+}
+@media screen and (max-width: 1000px) {
+  .placard {
+    margin-bottom: 20px;
+  }
+  .placard .placard__title {
+    font-size: 20px;
+  }
+  .placard .placard__title h1 {
+    padding: 15px;
+  }
+  .placard .placard__description {
+    margin-top: 105px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .placard .placard__description .placard__description-item {
+    margin-right: 20px;
+    margin-left: 20px;
+    max-width: 500px;
+    min-width: auto;
+    width: auto;
+  }
 }
 .list-title-image {
   display: flex;
@@ -389,6 +502,32 @@ video {
 .list-title-image .list-title-image__item img {
   max-width: 165px;
   max-height: 120px;
+}
+@media screen and (max-width: 1000px) {
+  .list-title-image {
+    justify-content: center;
+  }
+  .list-title-image .list-title-image__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 75px;
+    min-width: 12%;
+  }
+  .list-title-image .list-title-image__item h3 {
+    font-size: 30px;
+    line-height: 33px;
+  }
+  .list-title-image .list-title-image__item h4 {
+    font-size: 18px;
+  }
+  .list-title-image .list-title-image__item img {
+    max-width: auto;
+    max-height: 70px;
+  }
 }
 #project-single .project-single__header .project-single__header__btn {
   display: flex;
@@ -1442,6 +1581,14 @@ div.datepick-inline .datepick-title-row th {
 .featherlight:last-of-type {
   background-color: rgba(0, 0, 0, 0.9) !important;
 }
+@media screen and (max-width: 1000px) {
+  .featherlight {
+    top: 90px;
+  }
+  .featherlight .featherlight-content {
+    width: 100%;
+  }
+}
 .woocommerce-shop {
   position: relative;
 }
@@ -1819,15 +1966,9 @@ nav ul#main-menu > li:last-of-type {
   display: none;
 }
 @media screen and (max-width: 1000px) {
-  ul#main-menu li {
-    padding-left: 15px;
-  }
-}
-@media screen and (max-width: 750px) {
   ul#main-menu {
     display: none;
     flex-direction: column;
-    min-height: 100vh;
   }
   ul#main-menu li {
     padding-left: 0px;
@@ -1898,6 +2039,23 @@ nav ul#main-menu > li:last-of-type {
     padding-right: 35px;
     padding-top: 30px;
     display: block;
+  }
+  .menu-open ul#main-menu li {
+    padding-left: 0;
+  }
+  .menu-open ul#main-menu li ul.sub-menu {
+    display: block;
+    flex-direction: column;
+    margin-bottom: 30px;
+    left: -86px;
+    position: relative;
+  }
+  .menu-open ul#main-menu li ul.sub-menu li {
+    margin-left: 30px;
+    margin-bottom: 20px;
+  }
+  .menu-open ul#main-menu li ul.sub-menu li:after {
+    display: none;
   }
 }
 figure,
@@ -2008,27 +2166,19 @@ i,
 em {
   font-style: italic;
 }
-h4 {
-  font-size: 12px;
-}
-strong {
-  font-weight: bold;
-}
-ul li {
-  font-size: 11px;
-}
-blockquote,
-q {
-  margin: 0px 8% 30px 8%;
-  font-style: italic;
-}
-blockquote p:last-of-type,
-q p:last-of-type {
-  margin-bottom: 15px;
-}
 @media screen and (max-width: 700px) {
-  .rich-text ul li {
-    margin-bottom: 13px;
+  h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-size: 26px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  h3 {
+    font-size: 18px;
+    line-height: 20px;
   }
 }
 .structure-container {
@@ -2041,6 +2191,11 @@ q p:last-of-type {
   max-width: 2560px;
   margin: 0 auto;
 }
+@media screen and (max-width: 1000px) {
+  .structure-container .structure-container .structure-container__content {
+    padding-top: 70px;
+  }
+}
 .structure-unit-block {
   max-width: 2560px;
   padding: 50px 20px;
@@ -2048,6 +2203,11 @@ q p:last-of-type {
 @media screen and (min-width: 2560px) {
   .structure-unit-block {
     margin: 50px auto;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .structure-unit-block {
+    margin: 20px auto;
   }
 }
 .structure-red a {
@@ -2298,14 +2458,18 @@ header .header__content > a {
     top: 9px;
   }
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1000px) {
   header nav {
     display: none;
+  }
+  header .country-selector.weglot-inline {
+    right: 70px;
   }
   header .header__content {
     padding-top: 10px;
     padding-left: 5px;
     padding-right: 5px;
+    justify-content: space-between;
   }
   header .header__content #logo-anchor {
     position: inherit;
@@ -2319,11 +2483,17 @@ header .header__content > a {
     white-space: nowrap;
   }
   header.menu-open nav {
-    display: block;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
     position: absolute;
     right: -20px;
     left: 0px;
     top: 48px;
+    padding-bottom: 100px;
+  }
+  header.menu-open nav .menu-featherlight {
+    margin-left: 35px;
   }
 }
 .gallery {
