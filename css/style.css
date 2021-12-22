@@ -304,7 +304,7 @@ video {
 #project-list .project-list > .project-list__item .project-list__item__title div > p {
   color: transparent;
 }
-#project-list .project-list > .project-list__item .project-list__item__title > h4 {
+#project-list .project-list > .project-list__item .project-list__item__title > h4 p {
   color: transparent;
 }
 #project-list .project-list > .project-list__item figure,
@@ -359,12 +359,10 @@ video {
   margin-bottom: 0px;
   display: inline-flex;
 }
-#project-list .project-list > .project-list__item:hover > .project-list__item__title div p:first-of-type {
-  margin-right: 15px;
-}
 #project-list .project-list > .project-list__item:hover > .project-list__item__title div p:nth-of-type(2) {
   position: relative;
   padding-left: 9px;
+  margin-left: 15px;
 }
 #project-list .project-list > .project-list__item:hover > .project-list__item__title div p:nth-of-type(2):before {
   content: '';
@@ -382,12 +380,12 @@ video {
   width: 100%;
   background-color: white;
 }
-#project-list .project-list > .project-list__item:hover > .project-list__item__title h4 {
+#project-list .project-list > .project-list__item:hover > .project-list__item__title h4 p {
   color: white;
   position: relative;
   display: inline;
 }
-#project-list .project-list > .project-list__item:hover > .project-list__item__title h4 span {
+#project-list .project-list > .project-list__item:hover > .project-list__item__title h4 p span {
   position: absolute;
   height: 2px;
   top: -7px;

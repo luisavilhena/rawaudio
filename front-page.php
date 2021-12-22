@@ -38,8 +38,9 @@
 			          		<?php endif;?>
 			          		<span></span>
 			          	</div>
-			            <h4><?php the_title(); ?></h4>
-			            <span></span>
+			          	<h4><?php the_excerpt(); ?>
+			          		<span></span>
+			          	</h4>
 			          </div>
 			          <?php the_content() ?>
 			        </div>
