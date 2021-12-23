@@ -187,6 +187,10 @@ $(document).ready(function(){
 	$('.close').on("click", function(e){
 		$('.project-list__item').removeClass("active")
 		$('.close').removeClass("closeActive")
+		$(".project-list__item iframe").each(function() { 
+      var src= $(this).attr('src');
+      $(this).attr('src',src);  
+		});
 	})
 })
 
