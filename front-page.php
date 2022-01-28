@@ -50,7 +50,7 @@
 			<div class="close">
 			</div>
 		</div>
-		<?php echo do_shortcode('[ajax_load_more container_type="div" post_type="post" posts_per_page="6" taxonomy="portfoliocategories" taxonomy_terms="latest" taxonomy_operator="OR"]') ?>
+		<?php echo do_shortcode('[ajax_load_more container_type="div" post_type="post" posts_per_page="6" taxonomy="portfoliocategories" taxonomy_terms="latest" taxonomy_operator="OR" images_loaded="true" placeholder="true"]') ?>
 	</div>
 </main>
 <?php

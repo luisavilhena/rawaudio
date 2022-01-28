@@ -24,12 +24,11 @@ get_header(); ?>
 				  </div>
 				  <?php the_content() ?>
 				</div>
-						<?php echo do_shortcode('[ajax_load_more container_type="div" post_type="post" posts_per_page="3" taxonomy="portfoliocategories" taxonomy_terms="advertising, all, art, classics, content, films, games, latest, tv" taxonomy_operator="OR" images_loaded="true" placeholder="true"]') ?>
 			<?php endwhile; ?>
 			<div class="close">
 			</div>
 		</div>
-		<!-- teste -->
+		<?php echo do_shortcode('[ajax_load_more container_type="div" post_type="post" posts_per_page="3" taxonomy="portfoliocategories" taxonomy_terms="advertising, all, art, classics, content, films, games, latest, tv" taxonomy_operator="OR" images_loaded="true" placeholder="true"]') ?>
 	</div>
 
 </main>
