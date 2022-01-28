@@ -10,6 +10,11 @@ function raw_theme(){
 }
 add_action('wp_enqueue_scripts', 'raw_theme');
 
+add_theme_support( 'infinite-scroll', array(
+ 'container' => 'content',
+ 'footer' => 'page',
+) );
+
 function raw_theme_add_custom_image_sizes() {
 
      // Add "vertical" image

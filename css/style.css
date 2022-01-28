@@ -2089,6 +2089,9 @@ figure figcaption a,
   font-size: 18px;
   font-weight: 300;
 }
+.lazyload {
+  display: none;
+}
 .template-tc {
   padding-right: 10%;
   padding-left: 10%;

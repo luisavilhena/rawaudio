@@ -24,8 +24,10 @@
 
 //////lazyload//////
 $(document).ready(function(){
-	let images = document.querySelectorAll(".lazyload");
-	lazyload(images);
+	// let images = document.querySelectorAll(".lazyload");
+	// lazyload(images);
+	$(".lazyload").show().lazyload();
+
 })
 
 
