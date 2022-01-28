@@ -28,7 +28,8 @@ get_header(); ?>
 			<div class="close">
 			</div>
 		</div>
-		<?php echo do_shortcode('[ajax_load_more container_type="div" post_type="post" posts_per_page="6" taxonomy="portfoliocategories" taxonomy_terms="advertising, all, art, classics, content, films, games, latest, tv" taxonomy_operator="OR" images_loaded="true" placeholder="true"]') ?>
+		<!-- teste -->
+		<?php echo do_shortcode('[ajax_load_more container_type="div" post_type="post" posts_per_page="3" taxonomy="portfoliocategories" taxonomy_terms="advertising, all, art, classics, content, films, games, latest, tv" taxonomy_operator="OR" images_loaded="true" placeholder="true"]') ?>
 	</div>
 
 </main>
