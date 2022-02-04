@@ -22,13 +22,6 @@
 //     });
 // })();
 
-//////lazyload//////
-$(document).ready(function(){
-	// let images = document.querySelectorAll(".lazyload");
-	// lazyload(images);
-	$(".lazyload").show().lazyload();
-
-})
 
 
 
@@ -48,10 +41,8 @@ $(document).ready(function(){
       $(this).find( 'button' ).addClass( 'heading'+ k );
     });
     var items = slick.$slides;
-    console.log(items)
     items.each( function( k, v){
         var text = $(this).find( 'h2' ).text();
-        console.log(text)
         $( '.heading' + k ).text(text);
         // $('.heading' + k).css('content', 'text');
 
@@ -124,6 +115,8 @@ $(document).ready(function(){
 	  let parentWidth = element.parentElement.offsetWidth;
     // Velocidade da animacao
     let speed = 3;
+
+
     
     // Aqui cria-se um loop para aa animação que será executado a cada frame
     // window.requestAnimationFrame executa a animacao no proxima frame
@@ -137,20 +130,30 @@ $(document).ready(function(){
 	    if (left < -elementWidth) {
     	  element.style.left = endStart - 20 + 'px';
 	    }
-      
       loop = window.requestAnimationFrame(animationLoop);
     }
     animationLoop();
+
+
+    $('.placard__title h1').hover(function(){        
+      	speed=0
+      }, function() {
+        speed=3
+    	}
+    );
     return loop;
 	}
   // Quando o elemento sair completamente da tela
   // Fazemos com que ele recomece do outro lado, logo depois do paragrafo anterior
-  animate(para1, para1.offsetWidth);
-  animate(para2, para1.offsetWidth);
+  let animation1 = animate(para1, para1.offsetWidth);
+  let animation2 = animate(para2, para1.offsetWidth);
+
+	// animate(para1, para1.offsetWidth);
+	// animate(para2, para1.offsetWidth);
 
   $( ".placard__title h1" ).hover(function(e) {
   	let classTitle = e.target.className;
-  	console.log($('.'+classTitle))
+
  		$('.'+classTitle).css('color', '#CC0000')
  		$('.placard__description .placard__description-item div.'+classTitle + ' h3' ).css('color', '#CC0000')
  		$('.placard__description .placard__description-item div.'+classTitle + ' p' ).css('color', '#CC0000')
@@ -162,7 +165,6 @@ $(document).ready(function(){
  		  window.cancelAnimationFrame(para2, para1.offsetWidth)
   } , function(e){
 	 	let classTitle = e.target.className;
-	 	console.log($('.'+classTitle))
 			$('.'+classTitle).css('color', '#ffffff')
 			$('.placard__description .placard__description-item div.'+classTitle + ' h3' ).css('color', '#ffffff')
 			$('.placard__description .placard__description-item div.'+classTitle + ' p' ).css('color', '#ffffff')
@@ -202,36 +204,7 @@ $(document).ready(function(){
 	})
 })
 
-// $(document).ready(function(){
-// 	$('.text-box__item__more').on("click", function(e){
-// 		console.log('clicou out location')
-// 		$(this).toggleClass("active")
-// 	})
-// 	if($('.text-box__item__more a')){
-// 		$('.text-box__item__more').on("click", function(e){
-// 			$(this).removeClass("active")
-// 		})
-// 	}
-// })
 
-
-//BACKGROUND-COLOR MENU
-// $(document).ready(function(){
-// 		const backgroundColor = $('main').css('background-color')
-// 		const color = $('main').css('color')
-// 		$('header').css('background-color', backgroundColor)
-// 		$('ul#main-menu').css('background-color', backgroundColor)
-// 		$('#mobile-menu-trigger div span').css('background-color', color)
-// 		$('footer').css('background-color', backgroundColor)
-// 		$('header').css('color', color)
-// 		$('footer').css('color', color)
-// 		$('footer svg').css('fill', color)
-// 		$('header svg').css('fill', color)
-// 		$('header h1').css('color', color)
-// 		$('#main-menu li a').css('color', color)
-
-// 	// }
-// })
 
 //ABOUT SCROLL
 $(document).ready(function(){

@@ -7,7 +7,7 @@ get_header(); ?>
 		<div class="project-list">
 			<?php while (have_posts()) : the_post(); ?>
 				<div class="project-list__item">
-					<img  class="lazyload" loading="lazy" src="<?php the_post_thumbnail_url("horizontal") ?>'">
+					<img  class="lazyload" src="<?php the_post_thumbnail_url("horizontal") ?>'">
 				  <div class="project-list__item__title">
 				  	<div>
 				  		<?php if (carbon_get_the_post_meta('client')):?>
