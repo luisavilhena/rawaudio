@@ -603,7 +603,7 @@ video {
   color: #CC0000;
 }
 .featherlight:last-of-type {
-  background-color: rgba(0, 0, 0, 0.9) !important;
+  background-color: rgba(0, 0, 0, 0.2) !important;
 }
 @media screen and (max-width: 1000px) {
   .featherlight {
