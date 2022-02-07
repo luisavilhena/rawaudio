@@ -7,7 +7,7 @@ get_header(); ?>
 		<div class="project-list">
 			<?php while (have_posts()) : the_post(); ?>
 				<div class="project-list__item">
-					<img  class="lazyload" src="<?php the_post_thumbnail_url("horizontal") ?>'">
+					<img  class="lazyload" src="<?php the_post_thumbnail_url("horizontal") ?>">
 				  <div class="project-list__item__title">
 				  	<div>
 				  		<?php if (carbon_get_the_post_meta('client')):?>
@@ -28,7 +28,7 @@ get_header(); ?>
 			<div class="close">
 			</div>
 		</div>
-		<?php echo do_shortcode('[ajax_load_more container_type="div" post_type="post" posts_per_page="3" taxonomy="portfoliocategories" taxonomy_terms="advertising, all, art, classics, content, films, games, latest, tv" taxonomy_operator="OR" images_loaded="true" placeholder="true" scroll_distance="50" transition="masonry" masonry_selector=".project-list__item" masonry_animation="slide-down"]') ?>
+		<?php echo do_shortcode('[ajax_load_more container_type="div" post_type="post" posts_per_page="3" taxonomy="portfoliocategories" taxonomy_terms="advertising, all, art, classics, content, films, games, latest, tv" taxonomy_operator="OR" images_loaded="false" placeholder="false" scroll_distance="50" transition="masonry" masonry_selector=".project-list__item" masonry_animation="slide-down"]') ?>
 	</div>
 
 </main>
