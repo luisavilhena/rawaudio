@@ -15,6 +15,7 @@ add_theme_support( 'infinite-scroll', array(
  'footer' => 'page',
 ) );
 
+
 function raw_theme_add_custom_image_sizes() {
 
      // Add "vertical" image
@@ -227,11 +228,12 @@ function custom_post_type_portfolio() {
         "capability_type" => "post",
         "map_meta_cap" => true,
         "hierarchical" => false,
-        "rewrite" => [ "slug" => "portfolio", "with_front" => false, 'hierarchical' => true ],
-        "query_var" => true,
+         "query_var" => true,
         "menu_position" => 3,
         "menu_icon" => "dashicons-book-alt",
         "supports" => [ "title", "editor", "thumbnail", "excerpt", "trackbacks", "custom-fields", "comments", "revisions", "author", "page-attributes", "post-formats" ],
+        "rewrite" => [ "slug" => "portfolios", "with_front" => false, 'hierarchical' => true ],
+
     ];
 
     register_post_type( "portfolio", $args );
@@ -261,12 +263,12 @@ function custom_taxonomy_portfoliocategories() {
         "show_in_menu" => true,
         "show_in_nav_menus" => true,
         "query_var" => true,
-        "rewrite" => [ "slug" => "portfoliocategories", "with_front" => true, 'hierarchical' => true ],
         "show_admin_column" => true,
         "show_in_rest" => true,
         "rest_base" => "portfoliocategories",
         "rest_controller_class" => "WP_REST_Terms_Controller",
         "show_in_quick_edit" => true,
+        "rewrite" => [ "slug" => "portfolio", "with_front" => true, 'hierarchical' => true ],
     ];
 
     register_taxonomy( "portfoliocategories", [ "portfolio" ], $args );

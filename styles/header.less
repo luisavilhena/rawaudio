@@ -20,7 +20,7 @@ header {
 	.country-selector.weglot-inline { 
 		position: absolute;
 		right: 20px;
-		top: 42px;
+		top: 45px;
 		a {
 			font-size: 17px;
 			text-decoration: none;
@@ -101,18 +101,25 @@ header {
 }
 
 @media screen and (max-width: @screen-md) {
+	.page-id-2637 {
+		header {
+			position: relative;
+		}
+	}
 	header {
 		nav {
 			display: none;
 		}
 		.country-selector.weglot-inline {
-			right: 70px;
+			right: 60px;
+			top: 30px;
 		}
 		.header__content {
 			padding-top: 10px;
 			padding-left: 5px;
 			padding-right: 5px;
 			justify-content: space-between;
+			align-items: center;
 			#logo-anchor {
 				position: inherit;
 			}

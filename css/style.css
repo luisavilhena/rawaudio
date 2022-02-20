@@ -20,9 +20,9 @@
   color: transparent;
 }
 .carousel .carousel__imgs .slick-dots {
+  z-index: 1;
   left: 100% ;
   bottom: 0px ;
-  z-index: 99999;
   width: 67%;
   display: flex;
   flex-wrap: wrap;
@@ -171,6 +171,7 @@
   }
   .carousel .carousel__imgs .slick-dots li {
     border-bottom: 1px solid white;
+    margin: -0.5px;
   }
   .carousel .carousel__imgs .slick-dots li button {
     font-size: 15px;
@@ -179,6 +180,7 @@
   }
   .carousel .carousel__imgs .slick-dots li:nth-of-type(1n) {
     border-left: 1px solid white;
+    border-right: none;
   }
   .carousel .carousel__imgs .slick-dots li:nth-of-type(1n) button {
     text-align: center;
@@ -196,7 +198,7 @@
     left: 20px;
     right: 20px;
     max-width: 98%;
-    position: relative;
+    position: absolute;
   }
   .carousel .description .carousel__description {
     height: auto;
@@ -1280,7 +1282,7 @@ header nav {
 header .country-selector.weglot-inline {
   position: absolute;
   right: 20px;
-  top: 42px;
+  top: 45px;
 }
 header .country-selector.weglot-inline a {
   font-size: 17px;
@@ -1356,17 +1358,22 @@ header .header__content > a {
   }
 }
 @media screen and (max-width: 1000px) {
+  .page-id-2637 header {
+    position: relative;
+  }
   header nav {
     display: none;
   }
   header .country-selector.weglot-inline {
-    right: 70px;
+    right: 60px;
+    top: 30px;
   }
   header .header__content {
     padding-top: 10px;
     padding-left: 5px;
     padding-right: 5px;
     justify-content: space-between;
+    align-items: center;
   }
   header .header__content #logo-anchor {
     position: inherit;
