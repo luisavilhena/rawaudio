@@ -278,6 +278,7 @@ video {
   left: 28px;
 }
 #project-list .project-list > .project-list__item {
+  cursor: pointer;
   position: relative;
   display: block;
   margin-right: 0px;
@@ -1166,6 +1167,7 @@ em {
   font-style: italic;
 }
 body {
+  background-color: black;
   overflow-x: hidden;
 }
 .block-title {
