@@ -47,5 +47,9 @@ php_value max_execution_time 8000
 php_value max_input_time 8000
 </IfModule>
 
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.rawaudio\.com\.br$ [NC]
+RewriteRule ^(.*)$ https://rawaudio.com.br/$1 [L,R=301]
+
 # END WordPress
 

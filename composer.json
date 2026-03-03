@@ -1,7 +1,7 @@
 {
     "name": "luvilhena/xi-de-agosto-theme",
     "require": {
-        "htmlburger/carbon-fields": "^3.6.5"
+        "htmlburger/carbon-fields": "^3.6.9"
     }
 }
 

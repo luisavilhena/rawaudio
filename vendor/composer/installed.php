@@ -3,7 +3,7 @@
         'name' => 'luvilhena/xi-de-agosto-theme',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '93448453b605a243f45389274863564f4adfd8c4',
+        'reference' => '91deb18e26cd33f5b8f141e5d4ef7ec460893e26',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'htmlburger/carbon-fields' => array(
-            'pretty_version' => 'v3.6.5',
-            'version' => '3.6.5.0',
-            'reference' => 'b18f8e2a2cc4cc976306eb867ad1d740a8e7c1d9',
+            'pretty_version' => 'v3.6.9',
+            'version' => '3.6.9.0',
+            'reference' => 'f82e80e3e3469d6e86cc17a8950b918ad448a059',
             'type' => 'library',
             'install_path' => __DIR__ . '/../htmlburger/carbon-fields',
             'aliases' => array(),
@@ -22,7 +22,7 @@
         'luvilhena/xi-de-agosto-theme' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '93448453b605a243f45389274863564f4adfd8c4',
+            'reference' => '91deb18e26cd33f5b8f141e5d4ef7ec460893e26',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
